@@ -1,0 +1,26 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* это часто добавляют сюда же */
+}
+
+.profile-card {
+    width: 300px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 50px auto; /* центрирование */
+}
+.profile-card button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.profile-card button:hover {
+    background-color: darkblue; /* эффект при наведении */
+}
