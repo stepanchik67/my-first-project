@@ -1,8 +1,90 @@
-{
+/* Сброс стилей */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* это часто добавляют сюда же */
+    box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* --- Обертка для контента, чтобы текст не прилипал к краям --- */
+.content-wrapper {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+/* --- Задание 2: Меню со стилями nav-link, :hover и .active --- */
+
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    text-align: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    padding-bottom: 5px; /* Чтобы текст не прыгал при появлении рамки */
+    transition: color 0.3s ease;
+}
+
+/* Стиль при наведении (ховер) */
+.nav-link:hover {
+    color: #ffcc00;
+}
+
+/* Стиль для активной страницы */
+.nav-link.active {
+    color: #ffcc00;
+    font-weight: bold;
+    border-bottom: 2px solid #ffcc00;
+}
+
+
+/* --- Задание 1: Система кнопок --- */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none; 
+    transition: background-color 0.3s ease; 
+}
+
+.btn-primary {
+    background-color: blue;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: darkblue;
+}
+
+.btn-secondary {
+    background-color: #e0e0e0; 
+    color: #333; 
+}
+
+.btn-secondary:hover {
+    background-color: #cccccc;
+}
+
+
+/* --- Карточка профиля --- */
 
 .profile-card {
     width: 300px;
@@ -13,14 +95,27 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin: 50px auto; /* центрирование */
 }
-.profile-card button {
-    background-color: blue;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+
+.profile-card img {
+    border-radius: 50%; /* Сделает аватарку круглой (бонус для красоты) */
+    margin-bottom: 10px;
 }
-.profile-card button:hover {
-    background-color: darkblue; /* эффект при наведении */
+
+.profile-card h2 {
+    margin-bottom: 5px;
 }
+
+.profile-card p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+
+/* --- Задание 3: Ликвидация !important через правильную специфичность --- */
+/* 
+   ВНИМАНИЕ: В твоем текущем коде нигде нет !important. 
+   Если задание требует его найти и убрать, возможно, ты не скинул 
+   какой-то старый кусок кода. 
+   Если его нет — значит, ты уже выполнил это задание, просто написав 
+   правильные селекторы (например, .profile-card .btn вместо просто .btn).
+*/
