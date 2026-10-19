@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+м<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -7,15 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Задание 2: Меню навигации -->
+  
     <nav class="navbar">
         <a href="#" class="nav-link active">Главная</a>
         <a href="#" class="nav-link">Обо мне</a>
         <a href="#" class="nav-link">Контакты</a>
     </nav>
 
+    <header class="hero-banner">
+        <div class="hero-content">
+            <h1>Степан Буклов</h1>
+            <p>Ученик 10 класса и будущая проститутка</p>
+        </div>
+        <img src="ioshikage-kira.jpeg" alt="Мое фото" class="hero-photo">
+    </header>
+
+    <!-- Основной контейнер для центрирования контента -->
     <div class="content-wrapper">
+        
         <h1>Степан</h1>
         <p>
             Меня зовут Степан Буклов. Мне 16 лет. Мой дом находится в северо-западной части Таллинна,
@@ -31,13 +40,43 @@
             никому не проиграл.
         </p>
 
+        <!-- Твоя карточка профиля -->
         <div class="profile-card">
-            <!-- Убрал несуществующий атрибут size="100" -->
             <img src="ioshikage-kira.jpeg" alt="Аватар" width="100" height="100">
             <h2>Степан Буклов</h2>
             <p>ученик 10 класса</p>
             <button class="btn btn-primary">Написать</button>
         </div>
+
+        <!-- ЗАДАНИЕ 1: Палитра цветов, box-shadow и hover анимация -->
+        <section class="features">
+            <h2>Мои навыки</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>HTML & CSS</h3>
+                    <p>делать сайты с сомнительным содержанием</p>
+                </div>
+                <div class="card">
+                    <h3>Математика</h3>
+                    <p>хорошо считать</p>
+                </div>
+                <div class="card">
+                    <h3>трудолюбивость</h3>
+                    <p>делать работы вовремя</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ЗАДАНИЕ 3: Эффект Glassmorphism -->
+        <section class="glass-section">
+            <div class="glass-bg-image"></div> 
+            <div class="glass-card">
+                <h3>Glassmorphism</h3>
+                <p>Ты меня видишь Джотаро?</p>
+                <button class="btn btn-primary">Узнать больше</button>
+            </div>
+        </section>
+
     </div>
 
 </body>

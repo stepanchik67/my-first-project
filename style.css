@@ -1,4 +1,4 @@
-/* Сброс стилей */
+/* Базовый сброс */
 * {
     margin: 0;
     padding: 0;
@@ -6,27 +6,20 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
     line-height: 1.6;
 }
-
-/* --- Обертка для контента, чтобы текст не прилипал к краям --- */
-.content-wrapper {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-h1 {
-    margin-bottom: 15px;
-}
-
-/* --- Задание 2: Меню со стилями nav-link, :hover и .active --- */
 
 .navbar {
     background-color: #333;
     padding: 15px;
     text-align: center;
+    /* Закрепляем меню сверху, чтобы оно всегда было видно при прокрутке */
+    position: sticky; 
+    top: 0;
+    z-index: 100;
 }
 
 .nav-link {
@@ -34,70 +27,86 @@ h1 {
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
-    padding-bottom: 5px; /* Чтобы текст не прыгал при появлении рамки */
+    padding-bottom: 5px;
     transition: color 0.3s ease;
 }
 
-/* Стиль при наведении (ховер) */
 .nav-link:hover {
     color: #ffcc00;
 }
 
-/* Стиль для активной страницы */
 .nav-link.active {
     color: #ffcc00;
     font-weight: bold;
     border-bottom: 2px solid #ffcc00;
 }
 
-
-/* --- Задание 1: Система кнопок --- */
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: inherit;
-    cursor: pointer;
-    text-decoration: none; 
-    transition: background-color 0.3s ease; 
+/* Обертка для текста, чтобы он не прилипал к краям */
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-.btn-primary {
-    background-color: blue;
+h1 {
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   ЗАДАНИЕ 2: Hero-баннер 
+   ========================================= */
+.hero-banner {
+    background-image: 
+        linear-gradient(135deg, rgba(106, 17, 203, 0.8) 0%, rgba(37, 117, 252, 0.8) 100%),
+        url('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
     color: white;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    min-height: 350px;
 }
 
-.btn-primary:hover {
-    background-color: darkblue;
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-.btn-secondary {
-    background-color: #e0e0e0; 
-    color: #333; 
+.hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
 }
 
-.btn-secondary:hover {
-    background-color: #cccccc;
+.hero-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-
-/* --- Карточка профиля --- */
 
 .profile-card {
     width: 300px;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin: 50px auto; /* центрирование */
+    margin: 40px auto; /* Центрируем карточку */
 }
 
 .profile-card img {
-    border-radius: 50%; /* Сделает аватарку круглой (бонус для красоты) */
+    border-radius: 50%; 
     margin-bottom: 10px;
 }
 
@@ -110,12 +119,119 @@ h1 {
     color: #666;
 }
 
+/* Кнопки (из старых заданий) */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
 
-/* --- Задание 3: Ликвидация !important через правильную специфичность --- */
-/* 
-   ВНИМАНИЕ: В твоем текущем коде нигде нет !important. 
-   Если задание требует его найти и убрать, возможно, ты не скинул 
-   какой-то старый кусок кода. 
-   Если его нет — значит, ты уже выполнил это задание, просто написав 
-   правильные селекторы (например, .profile-card .btn вместо просто .btn).
-*/
+.btn-primary {
+    background-color: #2575fc;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1a5bbd;
+}
+
+/* =========================================
+   ЗАДАНИЕ 1: Карточки (Тени и Hover)
+   ========================================= */
+.features {
+    margin-top: 60px;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.cards-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 260px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #2575fc;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Hover-анимация */
+.card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.15), 0 10px 10px -5px rgba(0,0,0,0.04); 
+    border-top-color: #ffcc00; 
+}
+
+/* =========================================
+   ЗАДАНИЕ 3: Эффект Glassmorphism
+   ========================================= */
+.glass-section {
+    position: relative;
+    height: 400px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass-bg-image {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, #7F00FF 0%, #0004ff 100%); 
+    z-index: 1;
+}
+
+.glass-card {
+    position: relative;
+    z-index: 2;
+    width: 350px;
+    padding: 40px;
+    border-radius: 20px;
+    
+    
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); 
+    
+    color: white;
+    text-align: center;
+}
+
+.glass-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.glass-card p {
+    margin-bottom: 25px;
+    line-height: 1.5;
+    font-weight: 500;
+}
