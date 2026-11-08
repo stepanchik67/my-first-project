@@ -1,5 +1,4 @@
-
-/* ЗАДАНИЕ 2: Базовая настройка размеров (rem) */
+/*  Базовая настройка размеров (rem) */
 html {
     /* Базовый размер шрифта 16px. 1rem = 16px */
     font-size: 16px; 
@@ -14,7 +13,7 @@ html {
 }
 
 body {
-    /* ЗАДАНИЕ 1: Использование подключенных шрифтов. 
+    /*  Использование подключенных шрифтов. 
        Montserrat для заголовков зададим ниже, Inter - для основного текста */
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
@@ -72,7 +71,7 @@ p {
 }
 
 /* =========================================
-   ЗАДАНИЕ 2: Hero-баннер 
+  Hero-баннер 
    ========================================= */
 .hero-banner {
     background-image: 
@@ -156,7 +155,7 @@ p {
 }
 
 /* =========================================
-   ЗАДАНИЕ 1: Карточки (Тени и Hover)
+   Карточки (Тени и Hover)
    ========================================= */
 .features {
     margin-top: 3.75rem; /* 60px */
@@ -200,7 +199,7 @@ p {
 }
 
 /* =========================================
-   ЗАДАНИЕ 3: Эффект Glassmorphism
+   Эффект Glassmorphism
    ========================================= */
 .glass-section {
     position: relative;
@@ -250,9 +249,6 @@ p {
     font-weight: 500;
 }
 
-/* =========================================
-   НОВОЕ ПРАКТИЧЕСКОЕ ЗАДАНИЕ
-   ========================================= */
 
 .practicum-section {
     background-color: #ffffff;
@@ -274,7 +270,7 @@ p {
     margin-bottom: 1.5rem; /* 24px */
 }
 
-/* ЗАДАНИЕ 3: Псевдоэлемент ::first-letter (Буквица) */
+/*  Псевдоэлемент ::first-letter (Буквица) */
 .text-with-dropcap::first-letter {
     font-size: 3.5rem; /* 56px */
     font-weight: 800;
@@ -285,7 +281,7 @@ p {
     margin-top: -0.2rem; /* -3.2px */
 }
 
-/* ЗАДАНИЕ 3: Оформление цитаты (blockquote) */
+/*  Оформление цитаты (blockquote) */
 .styled-quote {
     background-color: #f4f7f6;
     border-left: 0.3rem solid #2575fc; /* Синяя полоса слева */
@@ -304,4 +300,87 @@ p {
     font-weight: 600;
     font-style: normal;
     color: #777;
+}
+
+
+/* =========================================================
+   БЛОК ДЛЯ ПРАКТИЧЕСКОГО ЗАДАНИЯ (Добавлено)
+   ========================================================= */
+
+.practicum-task-wrapper {
+    max-width: 56.25rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem;
+    border-top: 2px dashed #ccc;
+}
+
+.practicum-task-wrapper h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.task-block {
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.task-block h3 {
+    margin-bottom: 1rem;
+    color: #2575fc;
+}
+
+/* Задание 1: Box-sizing Border-box */
+.task-1-box {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    border: 5px solid #e74c3c;
+    background-color: #f9ebea;
+    /* Ключевое свойство: */
+    box-sizing: border-box; 
+    /* Благодаря ему, общая ширина будет ровно 300px, а контент сожмется */
+}
+
+/* Задание 2: Класс container с max-width и margin: 0 auto */
+.task-2-container {
+    background-color: #e8f4f8;
+    border: 1px solid #2575fc;
+    padding: 1rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Центрирование */
+}
+
+/* Задание 3: Margin Collapse */
+.task-3-margin {
+    /* Родительский контейнер */
+    border: 1px dashed #999;
+    padding: 10px;
+}
+
+.box-collapse-1 {
+    background-color: #ffcccc;
+    margin-bottom: 30px; /* Нижний отступ */
+    padding: 10px;
+}
+
+.box-collapse-2 {
+    background-color: #ccffcc;
+    margin-top: 50px; /* Верхний отступ */
+    padding: 10px;
+    /* Визуально расстояние между блоками будет 50px (максимальный из двух), 
+       а не 80px (30+50). Это и есть Margin Collapse. */
+}
+
+.solution-note {
+    margin-top: 20px;
+    background-color: #fff3cd;
+    padding: 10px;
+    border-left: 4px solid #ffc107;
+    font-size: 0.9rem;
 }
