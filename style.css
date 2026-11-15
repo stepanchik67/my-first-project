@@ -26,14 +26,16 @@ h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* ИЗМЕНЕНО: Для задания 2 "Плавающая шапка" */
 .navbar {
     background-color: #333;
-    /* Перевод в rem: 15px / 16 = 0.9375rem */
     padding: 0.9375rem;
     text-align: center;
-    position: sticky; 
+    position: fixed; /* Изменено со sticky на fixed согласно чек-листу */
     top: 0;
-    z-index: 100;
+    left: 0;
+    width: 100%; /* Fixed элементы нужно растягивать по ширине */
+    z-index: 1000;
 }
 
 .nav-link {
@@ -55,24 +57,7 @@ h1, h2, h3 {
     border-bottom: 0.125rem solid #ffcc00; /* 2px */
 }
 
-/* Обертка для текста, чтобы он не прилипал к краям */
-.content-wrapper {
-    max-width: 56.25rem; /* 900px */
-    margin: 0 auto;
-    padding: 2.5rem 1.25rem; /* 40px 20px */
-}
-
-h1 {
-    margin-bottom: 0.9375rem; /* 15px */
-}
-
-p {
-    margin-bottom: 1.25rem; /* 20px */
-}
-
-/* =========================================
-  Hero-баннер 
-   ========================================= */
+/* ИЗМЕНЕНО: Добавлен padding-top для компенсации fixed шапки */
 .hero-banner {
     background-image: 
         linear-gradient(135deg, rgba(106, 17, 203, 0.8) 0%, rgba(37, 117, 252, 0.8) 100%),
@@ -81,6 +66,8 @@ p {
     background-position: center;
     color: white;
     padding: 3.75rem 1.25rem; /* 60px 20px */
+    /* Компенсация высоты fixed навбара (примерно 55-60px) */
+    padding-top: 7.5rem; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,6 +95,20 @@ p {
     box-shadow: 0 0.625rem 1.25rem rgba(0,0,0,0.3); /* 0 10px 20px */
 }
 
+/* Обертка для текста, чтобы он не прилипал к краям */
+.content-wrapper {
+    max-width: 56.25rem; /* 900px */
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem; /* 40px 20px */
+}
+
+h1 {
+    margin-bottom: 0.9375rem; /* 15px */
+}
+
+p {
+    margin-bottom: 1.25rem; /* 20px */
+}
 
 .profile-card {
     width: 18.75rem; /* 300px */
@@ -383,4 +384,87 @@ p {
     padding: 10px;
     border-left: 4px solid #ffc107;
     font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   НОВЫЕ СТИЛИ ДЛЯ ЧЕК-ЛИСТА ПРАКТИКУМА
+   ========================================================= */
+
+.checklist-practicum-wrapper {
+    max-width: 56.25rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem;
+    border-top: 2px dashed #ccc;
+}
+
+.checklist-practicum-wrapper h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* --- Задание 1: Бейдж (relative + absolute) --- */
+.badge-container {
+    position: relative; /* Связка: родитель relative */
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.badge-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+.badge {
+    position: absolute; /* Связка: ребенок absolute */
+    top: -5px;
+    right: -10px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid #fff;
+}
+
+/* --- Задание 3: Модальное окно --- */
+.modal-overlay {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Затемнение оверлея */
+    z-index: 2000; /* Выше навбара (у которого 1000) */
+    
+    /* Центрирование */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-window {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    z-index: 2001; /* Выше оверлея на всякий случай */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.modal-window h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.modal-window p {
+    margin-bottom: 20px;
+    color: #666;
 }

@@ -14,6 +14,7 @@
 </head>
 <body>
   
+    <!-- ВНИМАНИЕ: Для выполнения практикума (Задание 2) navbar должен быть position: fixed -->
     <nav class="navbar">
         <a href="#" class="nav-link active">Главная</a>
         <a href="#" class="nav-link">Обо мне</a>
@@ -107,7 +108,6 @@
     
     <div class="practicum-task-wrapper">
     
-
         <!-- Задание 1: Box-sizing Border-box -->
         <div class="task-block">
             <h3> Карточка с box-sizing: border-box</h3>
@@ -141,6 +141,52 @@
             </div>
         </div>
     </div>
+
+    <!-- ========================================================= -->
+    <!-- НОВЫЙ БЛОК: ЧЕК-ЛИСТ ПРАКТИЧЕСКОГО ЗАДАНИЯ -->
+    <!-- ========================================================= -->
+    <div class="checklist-practicum-wrapper">
+
+        <!-- Задание 1: Связка relative + absolute для бейджа -->
+        <div class="task-block">
+            <h3>бейдж</h3>
+            <div class="badge-container">
+                <img src="ioshikage-kira.jpeg" alt="Аватар" class="badge-avatar">
+                <span class="badge">NEW</span>
+            </div>
+        </div>
+
+        <!-- Задание 3: Модальное окно с оверлеем, центрированием и z-index -->
+        <div class="task-block">
+            <h3> Модальное окно</h3>
+            <button class="btn btn-primary" id="openModalBtn">Открыть модальное окно</button>
+            
+            <!-- Оверлей и само окно -->
+            <div class="modal-overlay" id="myModal">
+                <div class="modal-window">
+                    <h3>Это модальное окно</h3>
+                    <button class="btn btn-primary" id="closeModalBtn">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Скрипт для работы модального окна -->
+    <script>
+        const modal = document.getElementById('myModal');
+        const openBtn = document.getElementById('openModalBtn');
+        const closeBtn = document.getElementById('closeModalBtn');
+
+        openBtn.onclick = function() {
+            modal.style.display = 'flex';
+        }
+
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+    
+    </script>
 
 </body>
 </html>
