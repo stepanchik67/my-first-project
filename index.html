@@ -171,6 +171,46 @@
         </div>
     </div>
 
+    <!-- ========================================================= -->
+    <!-- НОВЫЙ БЛОК: ВЫПОЛНЕНИЕ КРИТЕРИЕВ ИЗ ЧЕК-ЛИСТА (ДОБАВЛЕНО) -->
+    <!-- ========================================================= -->
+    <div class="practicum-task-wrapper">
+        <h2>Проверка критериев (Flexbox)</h2>
+
+        <!-- Критерий 1: Шапка сайта со space-between, align-items и gap -->
+        <div class="task-block">
+            <h3>Задание 1: Шапка сайта (space-between, align-items, gap)</h3>
+            <header class="practicum-header">
+                <div class="logo">MyLogo</div>
+                <nav class="practicum-nav">
+                    <a href="#">Ссылка 1</a>
+                    <a href="#">Ссылка 2</a>
+                    <a href="#">Ссылка 3</a>
+                </nav>
+                <button class="btn btn-primary">Войти</button>
+            </header>
+        </div>
+
+        <!-- Критерий 2: Ряд карточек с flex-wrap и flex: 1 1 240px -->
+        <div class="task-block">
+            <h3>Задание 2: Ряд карточек (flex-wrap, flex: 1 1 240px)</h3>
+            <div class="practicum-cards-container">
+                <div class="practicum-card">Карточка 1</div>
+                <div class="practicum-card">Карточка 2</div>
+                <div class="practicum-card">Карточка 3</div>
+                <div class="practicum-card">Карточка 4</div>
+            </div>
+        </div>
+
+        <!-- Критерий 3: Идеальное центрирование по двум осям на Flexbox -->
+        <div class="task-block">
+            <h3>Задание 3: Идеальное центрирование по двум осям</h3>
+            <div class="practicum-center-box">
+                <div class="practicum-center-content">Я в центре!</div>
+            </div>
+        </div>
+    </div>
+
     <!-- Скрипт для работы модального окна -->
     <script>
         const modal = document.getElementById('myModal');
@@ -184,8 +224,6 @@
         closeBtn.onclick = function() {
             modal.style.display = 'none';
         }
-
-    
     </script>
 
 </body>

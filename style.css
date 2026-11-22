@@ -468,3 +468,76 @@ p {
     margin-bottom: 20px;
     color: #666;
 }
+
+
+/* =========================================================
+   НОВЫЕ СТИЛИ ДЛЯ КРИТЕРИЕВ ИЗ ЧЕК-ЛИСТА (ДОБАВЛЕНО)
+   ========================================================= */
+
+/* Задание 1: Шапка сайта со space-between, align-items и gap */
+.practicum-header {
+    display: flex;
+    justify-content: space-between; /* space-between */
+    align-items: center; /* align-items */
+    gap: 1rem; /* gap */
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.practicum-header .logo {
+    font-weight: bold;
+    font-size: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.practicum-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.practicum-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.practicum-nav a:hover {
+    color: #ffcc00;
+}
+
+/* Задание 2: Ряд карточек с flex-wrap и flex: 1 1 240px */
+.practicum-cards-container {
+    display: flex;
+    flex-wrap: wrap; /* flex-wrap */
+    gap: 1rem;
+}
+
+.practicum-card {
+    flex: 1 1 240px; /* flex: 1 1 240px */
+    background-color: #e8f4f8;
+    border: 1px solid #2575fc;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Задание 3: Идеальное центрирование по двум осям на Flexbox */
+.practicum-center-box {
+    display: flex;
+    justify-content: center; /* По горизонтали */
+    align-items: center;     /* По вертикали */
+    height: 200px;           /* Задаем высоту для наглядности вертикального центрирования */
+    background-color: #f4f7f6;
+    border: 2px dashed #2575fc;
+    border-radius: 0.5rem;
+}
+
+.practicum-center-content {
+    background-color: #2575fc;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
